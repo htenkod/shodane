@@ -1,1 +1,249 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shodane</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img src="Logo1.jpg" alt="Shodane logo" />
+        <div class="brand-text">Shodane</div>
+      </div>
+      <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#innovation">Innovation</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Home / Hero -->
+    <section id="home">
+      <div class="hero">
+        <div>
+          <div class="hero-tag">
+            <span></span>
+            <div>Embedded Intelligence, Delivered</div>
+          </div>
+          <h1>
+            Upgraded living <br />
+            <span>with smart switches</span>.
+          </h1>
+          <p>
+            Our initial entry to the market is with state of art, smart IoT switches
+            for home and office automation. It upgrades living standard by bringing
+            intelligence to ordinary electrical switches. 
+            <br>
+            <br>
+            <img src="switch_design1.jpg" alt="switch1 design" />
+            <br>
+            <br>
+            Shodane also partners with teams to design, prototype, and ship embedded
+            systems that connect the physical and digital worlds with precision.            
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Start a project</a>
+            <a href="#about" class="btn-ghost">Learn more</a>
+          </div>
+          <div class="hero-meta">
+            <span><strong>Focus:</strong> Embedded, IoT, connectivity</span>
+            <span><strong>Location:</strong> Bangalore, India · Remote-friendly</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-logo-wrap">
+            <div class="glow-orbit"></div>
+            <img src="Logo1.jpg" alt="Shodane emblem" />
+            <div class="hero-chip">
+              <span>Firmware</span>
+              <span>BLE / Wireless</span>
+              <span>Prototyping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="section-header">
+        <div class="section-kicker">About</div>
+        <h2 class="section-title">Engineering first, buzzwords second</h2>
+        <p class="section-sub">
+          Shodane is a technology studio focused on embedded systems, firmware,
+          and connected products. From low-level drivers to polished demos, the
+          goal is simple: ship robust systems that are a pleasure to use.
+        </p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>What Shodane does</h3>
+          <ul class="bullet-list">
+            <li>Embedded firmware architecture and implementation.</li>
+            <li>Bluetooth Low Energy and wireless integration.</li>
+            <li>Rapid prototyping on evaluation boards and custom PCBs.</li>
+            <li>Edge connectivity to mobile apps and cloud APIs.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>How projects run</h3>
+          <p>
+            Engagements are designed to be straightforward and transparent,
+            whether you need a quick proof-of-concept or a production-ready
+            firmware stack.
+          </p>
+          <ul class="bullet-list">
+            <li>Clear milestones and measurable outcomes.</li>
+            <li>Direct access to the engineer building your system.</li>
+            <li>Code, docs, and handover that your team can own.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Innovation -->
+    <section id="innovation">
+      <div class="section-header">
+        <div class="section-kicker">Innovation</div>
+        <h2 class="section-title">From idea to working silicon</h2>
+        <p class="section-sub">
+          Innovation at Shodane is practical: build iteratively, prototype early,
+          and validate with real hardware so that surprises happen in the lab,
+          not in the field.
+        </p>
+      </div>
+
+      <div class="grid innovation-grid">
+        <div class="card">
+          <h3>Prototype quickly</h3>
+          <p>
+            Move from requirements to a working demo using proven platforms and
+            toolchains, then refine on custom hardware once the direction is
+            clear.
+          </p>
+          <div class="pill-row">
+            <span>Raspberry&nbsp;Pi</span>
+            <span>nRF / BLE</span>
+            <span>STM32</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Design for observability</h3>
+          <p>
+            Instrumentation, logging, and robust diagnostics are built in from
+            day one, making it easier to test, tune, and maintain complex
+            embedded behavior.
+          </p>
+          <div class="pill-row">
+            <span>Tracing</span>
+            <span>Over‑the‑air logs</span>
+            <span>Field updates</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Secure by default</h3>
+          <p>
+            Connectivity and update mechanisms are designed with security in
+            mind, using modern cryptography and defense-in-depth for devices
+            deployed at scale.
+          </p>
+          <div class="pill-row">
+            <span>Secure boot</span>
+            <span>Key management</span>
+            <span>Hardening</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="section-header">
+        <div class="section-kicker">Contact</div>
+        <h2 class="section-title">Let’s talk about your system</h2>
+        <p class="section-sub">
+          Share a bit about your project, and you’ll receive a focused response
+          outlining next steps, timelines, and how Shodane can help.
+        </p>
+      </div>
+
+      <div class="grid contact-grid">
+        <div class="card">
+          <form>
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="you@example.com"
+              />
+            </div>
+            <div>
+              <label for="company">Company</label>
+              <input
+                id="company"
+                type="text"
+                placeholder="Company or team name"
+              />
+            </div>
+            <div>
+              <label for="message">Project brief</label>
+              <textarea
+                id="message"
+                placeholder="Describe your idea, hardware, or challenge..."
+              ></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn-primary">
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-side">
+          <p>
+            Prefer a direct conversation? Reach out with a short note and a link
+            to any existing docs or repositories, and a call can be scheduled to
+            explore options.
+          </p>
+
+          <ul class="contact-list">
+            <li><span>Email</span> mailme@shodane.com</li>
+            <li><span>Time</span> Mon–Fri · 9am–5pm MST</li>
+          </ul>
+
+          <p>
+            This form is a simple static example; wire it to your preferred
+            backend, email service, or serverless function to start receiving
+            inquiries.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Shodane. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
