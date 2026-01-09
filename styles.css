@@ -205,6 +205,84 @@ section:last-of-type {
   margin-bottom: 1.5rem;
 }
 
+.policy-page .policy-container {
+    background-color: #fafafa;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 40px auto;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 24px 28px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.policy-page .policy-title {
+    color: #222222;
+    margin-bottom: 8px;
+}
+
+.policy-page .policy-last-updated {
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    color: #666666;
+}
+
+.policy-page .policy-section-title {
+    color: #333333;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 1.15rem;
+}
+
+.policy-page .policy-text {
+    color: #444444;
+    margin-bottom: 10px;
+    font-size: 0.98rem;
+}
+
+.policy-page .policy-list {
+    margin-left: 20px;
+    margin-bottom: 12px;
+    color: #444444;
+    font-size: 0.98rem;
+}
+
+.policy-page .policy-list li {
+    margin-bottom: 6px;
+}
+
+.policy-page a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.policy-page a:hover {
+    text-decoration: underline;
+}
+
+.policy-page .policy-contact {
+    margin-top: 12px;
+    line-height: 1.8;
+    color: #444444;
+}
+
+
+.btn-link {
+    color: #007bff;           /* Blue link color */
+    text-decoration: underline; /* Underline like traditional links */
+    font-weight: 500;         /* Slightly bold */
+}
+
+.btn-link:hover {
+    color: #0056b3;           /* Darker blue on hover */
+    text-decoration: none;    /* Remove underline on hover */
+}
+
+.btn-link:active {
+    color: #004085;           /* Even darker when clicked */
+}
+
 .btn-primary,
 .btn-ghost {
   padding: 0.65rem 1.5rem;
@@ -530,3 +608,4 @@ footer a {
     padding-top: 2.5rem;
   }
 }
+
