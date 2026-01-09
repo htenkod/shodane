@@ -275,6 +275,8 @@ section:last-of-type {
   box-shadow: 0 22px 60px #996bd4dd;
   overflow: hidden;
   isolation: isolate;
+  max-width: 100%;
+  height: auto;
 }
 
 .hero-logo-wrap::before {

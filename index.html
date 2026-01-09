@@ -16,17 +16,20 @@
       <nav class="nav-menu">
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#products">Products</a>
         <a href="#innovation">Innovation</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
+  
   <main>
+  <section id="home">
     <div class="hero-visual">
           <div class="hero-logo-wrap">
             <!-- <div class="glow-orbit"></div> -->
-            <img src="shodane_logo.png" alt="Shodane emblem" class="logo-small" height="auto" style="max-width: 5%;" />            
+            <img src="shodane_logo.png" alt="Shodane emblem" class="logo-small" width="100px" height="100px" />            
             <div class="hero-chip">
               <span>IoT Products</span>
               <span>BLE / Wi-Fi / Zigbee</span>
@@ -34,7 +37,7 @@
             </div>
           </div>
     <!-- Home / Hero -->
-    <section id="home">
+    <section id="products">
       <div class="hero">
         <div>
           
@@ -46,9 +49,9 @@
             Upgrade your home or office with our cutting-edge smart IoT switches—intelligence at your fingertips! 
             Effortlessly control lights and appliances via app or voice, enjoy energy savings, scheduling, 
             and away modes for ultimate convenience and security.            
-            <div class="side-by-side">
-              <img src="switch_design1.PNG" alt="switch1 design" height="auto", style="max-width: 25%;"/>
-              <img src="switch_design2.PNG" alt="switch2 design" height="auto", style="max-width: 25%;"/>
+            <img src="switch_design1.PNG" alt="switch1 design" height="auto" style="max-width: 250px;"/>
+            <img src="switch_design2.PNG" alt="switch2 design" height="auto" style="max-width: 250px;"/>
+            <div>                              
               <p>              
               <ul class="bullet-list">
                 <li>Control lights, fans, appliances from anywhere, via mobile app</li>
@@ -87,7 +90,7 @@
         <div class="section-kicker">About</div>
         <h2 class="section-title">Engineering first, buzzwords second</h2>
         <p class="section-sub">
-          Shodane is a technology Lab focused on embedded systems, firmware,
+          Shodane is a technology lab focused on embedded systems, firmware,
           and connected products. From low-level drivers to polished demos, the
           goal is simple: ship robust systems that are a pleasure to use.
         </p>
@@ -188,16 +191,22 @@
       </div>
 
       <div class="grid contact-grid">
+        <form action="https://api.web3forms.com/submit" method="POST" onsubmit="alert('Thanks for your request!')" >
+        <input type="hidden" name="access_key" value="f86223b7-5c57-477e-a83c-85947fa1ce9e" />
+        <input type="hidden" name="subject" value="New Enquirey from Shodane Website" />
+        <input type="checkbox" name="botcheck" id="" style="display: none;">
+        <input type="hidden" name="redirect" value="https://shodane.com/thanks.html">
         <div class="card">
           <form>
             <div>
               <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
+              <input id="name" name="name" type="text" placeholder="Your name" />
             </div>
             <div>
               <label for="email">Email</label>
               <input
                 id="email"
+                name="email"
                 type="email"
                 placeholder="you@example.com"
               />
@@ -206,6 +215,7 @@
               <label for="company">Company</label>
               <input
                 id="company"
+                name="company"
                 type="text"
                 placeholder="Company or team name"
               />
@@ -214,6 +224,7 @@
               <label for="message">Project brief</label>
               <textarea
                 id="message"
+                name="message"
                 placeholder="Number of smart switches or Describe your requirements/ideas..."
               ></textarea>
             </div>
@@ -224,6 +235,7 @@
             </div>
           </form>
         </div>
+        </form>
 
         <div class="contact-side">
           <p>
@@ -245,7 +257,9 @@
         </div>
       </div>
     </section>
+  </section>
   </main>
+  
 
   <footer>
     &copy; <span id="year"></span> Shodane. All rights reserved.
