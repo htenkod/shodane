@@ -1,6 +1,6 @@
 :root {
   --bg-main: #05070a;
-  --bg-section: #0b0f16;
+  --bg-section: #bcc5d3;
   --accent: #1e90ff;
   --accent-soft: #1e90ff33;
   --text-main: #f5f7ff;
@@ -20,6 +20,7 @@ body {
   background: radial-gradient(circle at top, #151b26 0, #05070a 55%);
   color: var(--text-main);
   line-height: 1.6;
+  font-size: 18px;
 }
 
 a {
@@ -34,8 +35,8 @@ header {
   backdrop-filter: blur(18px);
   background: linear-gradient(
     to bottom,
-    #05070add,
-    #05070a99,
+    #ae7ece99,
+    #05070add,        
     transparent
   );
   border-bottom: 1px solid var(--border-soft);
@@ -119,13 +120,39 @@ section:last-of-type {
   border-bottom: none;
 }
 
+.logo-small {
+  width: 96px;   /* ~1 inch on typical displays */
+  height: auto;
+}
+
+
+.side-by-side {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* Reduces from 1rem or 20px; use 0 for touching */
+}
+
+.side-by-side img {
+  display: block;
+  width: 25%
+}
+
+.side-by-side p {
+  flex: 1; /* Takes remaining space on right */
+  margin: 0;
+  padding: 0
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
   gap: 3rem;
   align-items: center;
   padding-top: 2.5rem;
+  display: flex;
 }
+
+
 
 .hero-tag {
   display: inline-flex;
@@ -166,7 +193,7 @@ section:last-of-type {
 
 .hero p {
   color: var(--text-muted);
-  max-width: 34rem;
+  /* max-width: 34rem; */
   margin-bottom: 1.75rem;
 }
 
@@ -242,9 +269,9 @@ section:last-of-type {
   position: relative;
   padding: 2rem;
   border-radius: 1.5rem;
-  background: radial-gradient(circle at top, #243552, #05070a);
+  background: radial-gradient(circle at top, #ffffff, #0a0b0e);
   border: 1px solid #223150;
-  box-shadow: 0 22px 60px #000000dd;
+  box-shadow: 0 22px 60px #996bd4dd;
   overflow: hidden;
   isolation: isolate;
 }
@@ -268,6 +295,7 @@ section:last-of-type {
   display: block;
   max-width: 230px;
   width: 100%;
+  height: fit-content;
   margin: 0 auto 1.25rem;
 }
 
