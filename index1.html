@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Geolocation Demo</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 600px; }
+        .box { border: 1px solid #ccc; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        button { padding: 10px 15px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 3px; }
+    </style>
+</head>
+<body>
+
+    <h1>User Geolocation Demo</h1>
+
+    <!-- Method 1: IP-Based Lookup -->
+    <div class="box">
+        <h3>Method 1: IP-Based Location (Approximate, No Popup)</h3>
+        <p id="ip-data">Loading IP location data...</p>
+    </div>
+
+    <!-- Method 2: Browser API Lookup -->
+    <div class="box">
+        <h3>Method 2: Browser GPS Location (Precise, Requires Popup)</h3>
+        <button onclick="getGPSLocation()">Request GPS Location</button>
+        <p id="gps-data"></p>
+    </div>
+
+    <script>
+        // --- METHOD 1: IP GEOLOCATION (Runs automatically on load) ---
+        // Uses the free tier of ipapi.co (limit: 30,000 requests per month)
+        fetch('https://ipapi.co')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ip-data').innerHTML = `
+                    <strong>City:</strong> ${data.city}<br>
+                    <strong>Region:</strong> ${data.region}<br>
+                    <strong>Country:</strong> ${data.country_name}<br>
+                    <strong>IP Coordinates:</strong> ${data.latitude}, ${data.longitude}
+                `;
+            })
+            .catch(error => {
+                document.getElementById('ip-data').innerText = 'Failed to load IP data.';
+                console.error(error);
+            });
+
+        // --- METHOD 2: BROWSER GPS GEOLOCATION (Runs on button click) ---
+        function getGPSLocation() {
+            const gpsOutput = document.getElementById('gps-data');
+            gpsOutput.innerText = "Locating...";
+
+            if (!navigator.geolocation) {
+                gpsOutput.innerText = "Geolocation is not supported by your browser.";
+                return;
+            }
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    gpsOutput.innerHTML = `<strong>Precise Coordinates:</strong> ${lat}, ${lon}`;
+                },
+                (error) => {
+                    gpsOutput.innerText = `Error: ${error.message}`;
+                }
+            );
+        }
+    </script>
+</body>
+</html>
