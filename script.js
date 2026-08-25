@@ -24,7 +24,9 @@ async function runAnalyticsTracking() {
             ip_address: geoData.ip || "Unknown",
             location: `${geoData.city || 'Unknown'}, ${geoData.region || 'Unknown'}, ${geoData.country_name || 'Unknown'}`,
             postal: geoData.postal || "N/A",
-            timezone: geoData.timezone || "UTC"
+            timezone: geoData.timezone || "UTC",
+            latitude: geoData.latitude || "0.0",
+            longitude: geoData.longitude || "0.0"
         };
 
         
